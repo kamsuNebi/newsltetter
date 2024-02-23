@@ -41,7 +41,7 @@ app.post("/", function (req, res) {
     responce.on("data", function (data) {
       console.log(JSON.parse(data));
 
-      if (responce.statusCode === 401) {
+      if (responce.statusCode === 200) {
         res.sendFile(__dirname + "/success.html");
       } else {
         res.sendFile(__dirname + "/failure.html");
